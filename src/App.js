@@ -16,9 +16,13 @@ function App() {
                     <span className="motto">- Helping you help yourself ;)</span>
                 </div>
                 <div className="videoContainer">
-                    <video controls preload="none"width="540">
-                        <source src="https://s3.eu-north-1.amazonaws.com/redeyemedia.io/videos/2021-01-28_20-31-14.mp4" type="video/mp4" />
-                    </video>
+                    <iframe title="React for beginners - #1 Components"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/El6h6A3odaQ"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen />
                 </div>
                 <div>
                     <p>At Red Eye Media we want you to learn and improve in order to become a successful developer.</p>
