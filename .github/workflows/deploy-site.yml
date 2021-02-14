@@ -1,7 +1,14 @@
 name: Deploy website
-on: [push]
-branches:
-  - master
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+      - ".gitignore"
+      - "LICENCE"
+      - "CODEOWNERS"
+    branches:
+      - master
+
 jobs:
   upload:
     runs-on: ubuntu-latest
