@@ -6,15 +6,14 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - name: build and test
       - uses: actions/checkout@master
+      - name: build and test
         run: |
           npm ci
           npm run build
 
       - name: Upload to S3
-      - uses: actions/checkout@master
-      - uses: zdurham/s3-upload-github-action@master
+        uses: zdurham/s3-upload-github-action@master
         with:
           args: --acl public-read
         env:
