@@ -1,0 +1,13 @@
+.userAgreementLink {
+  font-weight: bold;
+}
+
+.customerAgreementContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.paragraph {
+  margin-left: 5px;
+}
