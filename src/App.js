@@ -1,5 +1,5 @@
 import "./App.css";
-// import logo from "./logo.png";
+
 import redEyeNew from "./redEyeNew.png";
 import React from "react";
 import Newsletter from "./components/Newsletter/Newsletter";
