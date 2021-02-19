@@ -1,0 +1,18 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 52px;
+  margin-bottom: 8px;
+}
+
+.motto {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+}
