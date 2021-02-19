@@ -1,6 +1,6 @@
 import React from 'react'
 import { HStack, Button } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
