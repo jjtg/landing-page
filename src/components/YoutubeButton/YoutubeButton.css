@@ -1,0 +1,12 @@
+.youtubeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  max-width: 560px;
+}
+
+.youtubeText {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
