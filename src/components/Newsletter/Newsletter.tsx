@@ -9,11 +9,13 @@ import {
   Button,
 } from "@chakra-ui/react";
 import "./Newsletter.css";
+import GdprModal from "./GdprModal";
 
 const Newsletter = () => {
   const [userAgreementValue, setUserAgreementValue] = useState(false);
   const [buttonWasClicked, setButtonWasClicked] = useState(false);
   const [emailvalue, setEmailValue] = useState("");
+  const [seeCustomerAgreement, setSeeCustomerAgreement] = useState(false);
 
   const handleUserAgreementCheckbox = () => {
     setUserAgreementValue(!userAgreementValue);
@@ -38,6 +40,10 @@ const Newsletter = () => {
     setButtonWasClicked(true);
   };
 
+  const handleOpenCustomerAgreement = () => {
+    setSeeCustomerAgreement(true);
+  };
+
   return (
     <Box bg="#fff" p={4} maxW="560px" mt="30px" mb="30px" borderRadius="5px">
       {buttonWasClicked ? (
@@ -45,8 +51,8 @@ const Newsletter = () => {
       ) : (
         <FormControl id="email">
           <FormLabel>
-            Sign up to our newsletter and get a free e-book on all the steps you
-            need to know to become a developer
+            Sign up to our newsletter and get notified when we launch our first
+            complete developer course.
           </FormLabel>
           <Input
             value={emailvalue}
@@ -62,10 +68,13 @@ const Newsletter = () => {
             />
             <p className="paragraph">
               I confirm that I have read and accepted the
-              <a href="/" className="userAgreementLink">
+              <span
+                onClick={handleOpenCustomerAgreement}
+                className="customerAgreementLink"
+              >
                 {" "}
-                user agreement
-              </a>
+                privacy policy
+              </span>
             </p>
           </div>
           <Button
@@ -78,11 +87,15 @@ const Newsletter = () => {
             Sign up
           </Button>
           <FormHelperText color="black">
-            By signing up to our newsletter you need to agree to our user
-            agreement.
+            By signing up to our newsletter you need to agree to our privacy
+            policy.
           </FormHelperText>
         </FormControl>
       )}
+      <GdprModal
+        seeCustomerAgreement={seeCustomerAgreement}
+        setSeeCustomerAgreement={setSeeCustomerAgreement}
+      />
     </Box>
   );
 };

@@ -1,5 +1,6 @@
-.userAgreementLink {
+.customerAgreementLink {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .customerAgreementContainer {
